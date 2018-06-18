@@ -1,0 +1,78 @@
+create database PDV;
+
+use pdv;
+
+create table Cliente (
+	CODCLI integer PRIMARY KEY,
+	NOME varchar(35) NOT NULL,
+	BONUS integer,
+	PERFIL char,
+	STATUS char);
+
+insert into Cliente VALUES (101, 'Monica Geller', 350, 'P', 'A');
+insert into Cliente VALUES (102, 'Ross Geller', 230, 'G', 'A');
+insert into Cliente VALUES (103, 'Phoebe Buffay', 100, 'M', 'I');
+insert into Cliente VALUES (104, 'Rachel Green', 500, 'G', 'A');
+insert into Cliente VALUES (105, 'Joey Tribianni', 100, 'P', 'I');
+insert into Cliente VALUES (106, 'Chandler Bing', 200, 'M', 'A'); 
+
+create table Localidade (
+	CODLOCAL integer PRIMARY KEY,
+	NOME varchar(35) NOT NULL,
+	ENDERECO varchar(80),
+	TELEFONE varchar(14));
+
+insert into Localidade VALUES (01, 'Central Perk', 'Central Park NY', '12345678');
+insert into Localidade VALUES (02, 'Vila Isabel', 'R Teodoro da Silva 300', '98765432');
+insert into Localidade VALUES (03, 'Tijuca', 'R Conde de Bonfim 777', '56473829');
+
+create table Produto (
+	CODPROD integer,
+	CODLOCAL integer,
+	DESCRICAO varchar(35) NOT NULL,
+	QTD_ESTOQUE integer NOT NULL,
+	PRECO_UNITARIO double NOT NULL,
+	PRIMARY KEY(CODPROD),
+	FOREIGN KEY(CODLOCAL) REFERENCES Localidade (CODLOCAL)
+);
+
+insert into Produto VALUES (1001, 02, 'Chocolate Lacta', 55, 4.99);
+insert into Produto VALUES (1002, 02, 'Serenata de Amor', 300, 0.60);
+insert into Produto VALUES (1003, 02, 'Batom GAROTO', 243, 0.95);
+insert into Produto VALUES (1004, 01, 'Sorvete Kibom', 40, 3.40);
+insert into Produto VALUES (1005, 01, 'Bombom Sonho de Valsa', 780, 1.20);
+insert into Produto VALUES (1006, 01, 'Bombom Serenata de Amor', 250, 0.60);
+insert into Produto VALUES (1007, 03, 'Chocolate Lacta', 33, 4.99);
+insert into Produto VALUES (1008, 03, 'Bis Lacta Caixa', 279, 3.20);
+insert into Produto VALUES (1009, 03, 'Sorvete Kibom', 222, 3.40);
+
+create table Venda (
+	CODCLI integer,
+	CODPROD integer,
+	CODLOCAL integer,
+	QTD_VENDA integer,
+	VALOR_TOTAL double,
+	DATA_VENDA date,
+	PRIMARY KEY(CODCLI, CODPROD, CODLOCAL),
+	FOREIGN KEY(CODCLI) REFERENCES Cliente(CODCLI),
+	FOREIGN KEY(CODPROD) REFERENCES Produto(CODPROD),
+	FOREIGN KEY(CODLOCAL) REFERENCES Localidade(CODLOCAL));
+
+create table Desconto (
+	ID_DESCONTO integer PRIMARY KEY,
+	CODPROD integer,
+	PERCENTUAL integer,
+	QTD_MIN integer,
+	QTD_MAX integer,
+	FOREIGN KEY(CODPROD) REFERENCES Produto(CODPROD));
+
+insert into Desconto VALUES (1001, 1001, 10, 10, 200);
+insert into Desconto VALUES (1002, 1002, 5, 20, 100);
+insert into Desconto VALUES (1003, 1003, 5, 30, 500);
+insert into Desconto VALUES (1004, 1004, 10, 5, 500);
+insert into Desconto VALUES (1005, 1005, 8, 10, 400);
+insert into Desconto VALUES (1006, 1006, 5, 20, 200);
+insert into Desconto VALUES (1007, 1007, 10, 15, 100);
+insert into Desconto VALUES (1008, 1008, 10, 15, 300);
+insert into Desconto VALUES (1009, 1009, 10, 20, 500);
+	
