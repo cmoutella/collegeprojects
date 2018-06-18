@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title> Formulário The Code </title>
+   
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="Form_stylesheet.css">
+ 
+</head>
+
+<body>
+	<header><img src="TheCode.png" class="img-fluid" alt="responsive image" width="100% /9"></header>
+	
+	<!-- NAVBAR-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="navbar-nav mr-auto">
+				
+						<li class="col-md-3 nav-item">
+							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+						</li>
+					
+						<li class="col-md-2 nav-item">
+								<a class="nav-link" href="thecode_sobre.html" role="button" id="dropmenu_sobre">Sobre</a>
+						</li>
+						
+						<li class="col-md-2"></li>
+						
+						<li class="nav-item active">
+							<a class=" nav-link btn btn-success" href="ficha.html">Increva-se</a>
+						</li>
+					
+					
+					</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<br>
+	
+	<div class="container">
+		<div class="row row justify-content-md-center">
+			<div class="col-10">
+				<form class="form-horizontal">
+					
+					<br>
+					
+					<legend align="center"><h1>Junte-se ao The Code</h1></legend>
+					
+					<br><br>
+					
+					<div class="form-group row">
+						<label for="email" class="col-md-4 col-form-label text-right">Endereço de email</label>
+						<input class=" col-md-6 form-control" type="email" id="email" placeholder="email@example.com" required/>
+					</div>
+						
+					<div class="form-group row">		
+						<label for="nome" class="col-md-4 col-form-label text-right">Nome</label>
+						<input class="col-md-6 form-control" type="text" id="nome" required/>
+					</div>
+						
+					<div class="form-group row">
+						<label for="sexo" class="col-md-4 col-form-label text-right">Sexo</label>
+						<select class="col-md-6 form-control" name="sexo" id="sexo">
+							<option value="" selected></option>
+							<option value="masculino">Masculino</option>
+							<option value="feminino">Feminino</option>
+						</select>
+					</div>
+
+					<div class="form-group row">
+						<label for="curso" class="col-md-4 col-form-label text-right">Curso</label>
+						<select class="col-md-6 form-control" name="curso" id="curso">
+							<option value="" selected></option>
+							<option value="informatica">Curso Técnico em Informatica</option>
+							<option value="alimentos">Curso Técnico em Alimentos</option>
+							<option value="agropecuaria">Curso Técnico em Agropecuaria</option>
+						</select>
+					</div>
+
+					<div class="form-group row">
+						<label for="endereco" class="col-md-4 col-form-label text-right">Endereço para correspondência</label>
+						<input class="col-md-6 form-control" type="text" id="endereco" />
+					</div>
+
+					<div class="form-group row">
+						<label for="complemento" class="col-md-4 col-form-label text-right">Complemento do endereço</label>
+						<input class="col-md-6 form-control" type="text" id="complemento" />
+					</div>
+						
+					<div class="form-group row">
+						<label for="cep" class="col-md-4 col-form-label text-right">CEP</label>
+						<input class="col-md-6 form-control" type="text" id="cep" placeholder="00000-000" required/>
+					</div>
+					
+					<div class="form-group row">
+						<label for="municipio" class="col-md-4 col-form-label text-right">Municipio</label>
+						<input class="col-md-5 form-control" type="text" id="municipio" />
+						<select class="col-md-1 form-control" name="uf" id="uf">
+							<option value="AC">AC</option>
+							<option value="AL">AL</option>
+							<option value="AP">AP</option>
+							<option value="AM">AM</option>
+							<option value="BA">BA</option>
+							<option value="CE">CE</option>
+							<option value="DF">DF</option>
+							<option value="ES">ES</option>
+							<option value="GO">GO</option>
+							<option value="MA">MA</option>
+							<option value="MS">MS</option>
+							<option value="MT">MT</option>
+							<option value="MG">MG</option>
+							<option value="PA">PA</option>
+							<option value="PB">PB</option>
+							<option value="PR">PR</option>
+							<option value="PE">PE</option>
+							<option value="PI">PI</option>
+							<option value="RJ">RJ</option>
+							<option value="RN">RN</option>
+							<option value="RS" selected>RS</option>
+							<option value="RO">RO</option>
+							<option value="RR">RR</option>
+							<option value="SC">SC</option>
+							<option value="SP">SP</option>
+							<option value="SE">SE</option>
+							<option value="TO">TO</option>
+						</select>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-4"></div>
+							<button type="button" class="col-md-2 btn btn-primary">Enviar</button>
+					</div>
+										
+					<br>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

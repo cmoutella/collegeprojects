@@ -1,0 +1,20 @@
+/* Documento CSS */
+
+body{
+  background-color:#929292}
+
+header{
+	/*text-align: center;*/
+	font-family:"Trebuchet MS", Arial, Verdana;
+}
+
+form{
+    font-family: "Trebuchet MS", Tahoma, Helvetica, Arial;
+    color: #333333;
+}
+
+
+/* Tabela de Cores: 
+   http://erikasarti.net/html/tabela-cores/ 
+   http://erikasarti.net/html/tabela-cores-seguras-web-safe/ 
+*/

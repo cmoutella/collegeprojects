@@ -1,0 +1,15 @@
+Unicarioca 2018.2
+Prof. Doria
+Proposta: Registradora
+------
+PT
+
+Criar um banco de dados com tabelas de clientes, filiais, produtos e vendas (Script BD).
+Desenvolver uma aplicação que faça busca neste banco de dados para trazer as informações de valores de produtos e aplicar as regras de negócios.
+Registrar as vendas feitas na tabela de vendas.
+------
+EN
+
+Create a database for the Register containing tables for clients, branches, products and sales (Script BD).
+Develop an application that searches de DB to get the price for product and apply the business rules.
+Register the sales made on VENDAS table.
